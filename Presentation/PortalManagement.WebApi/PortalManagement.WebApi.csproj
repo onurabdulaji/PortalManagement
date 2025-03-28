@@ -15,6 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\Core\PortalManagement.Application\PortalManagement.Application.csproj" />
     <ProjectReference Include="..\..\Infrastructure\PortalManagement.Persistence\PortalManagement.Persistence.csproj" />
   </ItemGroup>
 

@@ -5,4 +5,5 @@ namespace PortalManagement.Domain.Repositories.Abstracts.IAppUserRepositories;
 
 public interface IWriteAppUserRepository : IGenericWriteRepository<AppUser>
 {
+    Task CreateUser(AppUser appUser);
 }

@@ -9,5 +9,11 @@ public class WriteAppUserRepository : GenericWriteRepository<AppUser>, IWriteApp
 {
     public WriteAppUserRepository(AppDbContext appDbContext) : base(appDbContext)
     {
+
+    }
+
+    public async Task CreateUser(AppUser appUser)
+    {
+        await _context.AddAsync(appUser);
     }
 }

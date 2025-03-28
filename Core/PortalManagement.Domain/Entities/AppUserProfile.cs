@@ -19,5 +19,5 @@ public class AppUserProfile : BaseEntity
     public DateTime? DateOfBirth { get; set; }
     public string? Email { get; set; }
     // Relational Props
-    public virtual AppUser? AppUser { get; set; }
+    public virtual AppUser AppUser { get; set; }
 }

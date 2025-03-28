@@ -1,6 +1,8 @@
-﻿using PortalManagement.Domain.Repositories.IGeneric;
+﻿using PortalManagement.Domain.Repositories.Abstracts.IAppUserRepositories;
+using PortalManagement.Domain.Repositories.IGeneric;
 using PortalManagement.Domain.Repositories.IUnitOfWorks;
 using PortalManagement.Persistence.Context.Data;
+using PortalManagement.Persistence.Repositories.Abstracts.AppUserRepository;
 using PortalManagement.Persistence.Repositories.GenericRepositories;
 
 namespace PortalManagement.Persistence.Repositories.UnitOfWorks;
@@ -9,6 +11,10 @@ public class UnitOfWork : IUnitOfWork
 {
     protected readonly AppDbContext _context;
     private readonly Dictionary<Type, object> _repositories = new(); // (singleton pattern).
+
+    public IReadAppUserRepository TGetReadAppUserRepository => GetOrCreateRepository<IReadAppUserRepository, ReadAppUserRepository>();
+
+    public IWriteAppUserRepository TGetWriteAppUserRepository => GetOrCreateRepository<IWriteAppUserRepository, WriteAppUserRepository>();
 
     public UnitOfWork(AppDbContext context)
     {

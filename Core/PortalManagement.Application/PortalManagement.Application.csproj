@@ -6,4 +6,17 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="12.4.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Commons\PortalManagement.DTO\PortalManagement.DTO.csproj" />
+    <ProjectReference Include="..\PortalManagement.Domain\PortalManagement.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Features\MediatR\Authentication\CreateUser\Queries\" />
+  </ItemGroup>
+
 </Project>
