@@ -6,6 +6,6 @@ namespace PortalManagement.Application.IManagement.UserService;
 public interface IUserHelperManagementService
 {
     void ValidateUserCreateInput(string username, string email);
-    Task ValidateEmailUniquenessAsync(UserManager<AppUser> _userManager, string email);
+    Task ValidateEmailUniquenessAsync(UserManager<AppUser> userManager, string email);
 
 }
